@@ -18,10 +18,10 @@ public class RoyalGameOfUr extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        ChoseGameModeBoard choosingGameModeBoard = new ChoseGameModeBoard();
         OneVsOneBoard oneVsOneBoard = new OneVsOneBoard();
-        Scene choosingGameModeScene = new Scene(choosingGameModeBoard.getGrid(),1200,600,Color.TRANSPARENT);
         Scene playerVsPlayerScene = new Scene(oneVsOneBoard.getGrid(),1200,600,Color.TRANSPARENT);
+        ChoseGameModeBoard choosingGameModeBoard = new ChoseGameModeBoard(primaryStage,playerVsPlayerScene);
+        Scene choosingGameModeScene = new Scene(choosingGameModeBoard.getGrid(),1200,600,Color.TRANSPARENT);
 
         StartingBoard startingBoard = new StartingBoard(primaryStage,choosingGameModeScene,playerVsPlayerScene);
         
