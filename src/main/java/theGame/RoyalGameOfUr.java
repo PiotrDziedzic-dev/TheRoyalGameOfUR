@@ -6,8 +6,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import theGame.board.ChoseGameModeBoard;
 import theGame.board.OneVsOneBoard;
-import theGame.board.StartingBoard;
-
+import theGame.board.MenuBoard;
 
 
 public class RoyalGameOfUr extends Application {
@@ -23,9 +22,9 @@ public class RoyalGameOfUr extends Application {
         ChoseGameModeBoard choosingGameModeBoard = new ChoseGameModeBoard(primaryStage,playerVsPlayerScene);
         Scene choosingGameModeScene = new Scene(choosingGameModeBoard.getGrid(),1200,600,Color.TRANSPARENT);
 
-        StartingBoard startingBoard = new StartingBoard(primaryStage,choosingGameModeScene,playerVsPlayerScene);
+        MenuBoard menuBoard = new MenuBoard(primaryStage,choosingGameModeScene,playerVsPlayerScene);
         
-        Scene scene = new Scene(startingBoard.getGrid(),1200,600, Color.TRANSPARENT);
+        Scene scene = new Scene(menuBoard.getGrid(),1200,600, Color.TRANSPARENT);
         primaryStage.setTitle("TheRoyalGameOfUr");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

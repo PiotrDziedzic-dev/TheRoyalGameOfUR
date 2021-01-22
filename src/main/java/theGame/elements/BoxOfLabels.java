@@ -12,19 +12,17 @@ public class BoxOfLabels {
     private final Label blueScoreLabel = new Label("Score: ");
 
     public BoxOfLabels() {
-
         yellowPawnsLabel.setFont(new Font("Arial",24));
         yellowPawnsLabel.setTextFill(Color.web("#0000FF"));
 
         bluePawnsLabel.setFont(new Font("Arial",24));
-        bluePawnsLabel.setTextFill(Color.web("#0000FF"));
+        bluePawnsLabel.setTextFill(Color.web("#FF0"));
 
         yellowScoreLabel.setFont(new Font("Arial",24));
-        yellowScoreLabel.setTextFill(Color.web("#0000FF"));
+        yellowScoreLabel.setTextFill(Color.web("#000000"));
 
         blueScoreLabel.setFont(new Font("Arial",24));
-        blueScoreLabel.setTextFill(Color.web("#0000FF"));
-
+        blueScoreLabel.setTextFill(Color.web("#000000"));
     }
 
     public Label getYellowPawnsLabel() {

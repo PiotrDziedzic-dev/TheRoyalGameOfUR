@@ -35,12 +35,12 @@ public class ChoseGameModeBoard {
         Background background = createChoosingBackground();
 
         for(int i=0; i<6;i++) {
-            RowConstraints row = new RowConstraints(100);
+            RowConstraints row = new RowConstraints(90);
             grid.getRowConstraints().add(row);
         }
 
         for(int i=0; i<12;i++) {
-            ColumnConstraints column = new ColumnConstraints(100);
+            ColumnConstraints column = new ColumnConstraints(90);
             grid.getColumnConstraints().add(column);
         }
 

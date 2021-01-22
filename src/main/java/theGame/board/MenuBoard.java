@@ -11,7 +11,7 @@ import theGame.buttons.StartingButton1;
 import theGame.buttons.StartingButton2;
 
 
-public class StartingBoard {
+public class MenuBoard {
 
     GridPane grid = new GridPane();
 
@@ -26,7 +26,7 @@ public class StartingBoard {
         return new Background(backgroundImage);
     }
 
-    public StartingBoard(Stage stage,Scene scene1,Scene scene2) {
+    public MenuBoard(Stage stage, Scene scene1, Scene scene2) {
 
         StartingButton1 startingButton1 = new StartingButton1(stage,scene1);
         Button button1 = startingButton1.getButton();
