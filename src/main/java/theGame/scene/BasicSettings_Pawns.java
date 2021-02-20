@@ -10,11 +10,19 @@ import java.util.List;
 
 public class BasicSettings_Pawns {
 
-    BasicSettings_Boards basicSettings_boards = new BasicSettings_Boards();
-    List<BoardField> blueFields = basicSettings_boards.getBluePlayerFields();
-    List<BoardField> yellowFields = basicSettings_boards.getYellowPlayerFields();
+    public BasicSettings_Pawns(BasicSettings_Boards basicSettings_boards) {
+        this.basicSettings_boards = basicSettings_boards;
+    }
+
+    private BasicSettings_Boards basicSettings_boards = new BasicSettings_Boards();
+
+
 
     public void prepare_Pawns(GridPane grid) {
+
+        List<BoardField> blueFields = basicSettings_boards.getBluePlayerFields();
+        List<BoardField> yellowFields = basicSettings_boards.getYellowPlayerFields();
+
 
         Pawn p1Yellow = new YellowPawn(yellowFields,grid,6,1,"yellow");
         Pawn p2Yellow = new YellowPawn(yellowFields,grid,7,1,"yellow");

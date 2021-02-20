@@ -24,7 +24,7 @@ public class OneVsOneBoard {
     }
 
     BasicSettings_Boards basicSettings_boards = new BasicSettings_Boards();
-    BasicSettings_Pawns basicSettings_pawns = new BasicSettings_Pawns();
+    BasicSettings_Pawns basicSettings_pawns = new BasicSettings_Pawns(basicSettings_boards);
     BasicSetting_Label_PvsP_Mode basicSetting_label_pvsP_mode = new BasicSetting_Label_PvsP_Mode();
     private final Image diceToss = new Image("file:src/main/resources/DiceToss.png");
     ImageView diceTossView = new ImageView(diceToss);
