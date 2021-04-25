@@ -1,5 +1,7 @@
 package theGame.elements;
 
+import theGame.elements.pawns.Pawn;
+
 import java.util.Random;
 
 public class Dice {
@@ -8,6 +10,7 @@ public class Dice {
     private static int diceNumber;
     private static boolean canRoll = true;
     private static boolean canMove;
+    private static boolean blueMove = true;
 
     public static int diceRoll() {
 
@@ -37,5 +40,23 @@ public class Dice {
 
     public static void setCanMove(boolean canMove) {
         Dice.canMove = canMove;
+    }
+
+    public static boolean isBlueMove() {
+        return blueMove;
+    }
+
+    public static void setBlueMove(boolean blueMove) {
+        Dice.blueMove = blueMove;
+    }
+
+    public boolean whoseMove(Pawn pawn) {
+        if(pawn.getColor().equals("blue") && blueMove==true) {
+            return true;
+        } else if (pawn.getColor().equals("yellow") && blueMove==false) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

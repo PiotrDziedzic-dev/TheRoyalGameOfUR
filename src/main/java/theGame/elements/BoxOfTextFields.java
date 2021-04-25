@@ -5,9 +5,9 @@ import javafx.scene.control.TextField;
 
 public class BoxOfTextFields {
 
-    TextField yellowScoreTextField = new TextField("0");
-    TextField blueScoreTextField = new TextField("0");
-    TextField diceNumberTextField = new TextField("Dice: ");
+    static TextField yellowScoreTextField = new TextField("0");
+    static TextField blueScoreTextField = new TextField("0");
+    static TextField diceNumberTextField = new TextField("Dice: ");
 
 
     public BoxOfTextFields() {

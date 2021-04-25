@@ -7,8 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import theGame.buttons.StartingButton1;
-import theGame.buttons.StartingButton2;
+import theGame.buttons.StartingButton;
 
 
 public class MenuBoard {
@@ -26,13 +25,10 @@ public class MenuBoard {
         return new Background(backgroundImage);
     }
 
-    public MenuBoard(Stage stage, Scene scene1, Scene scene2) {
+    public MenuBoard(Stage stage, Scene scene1) {
 
-        StartingButton1 startingButton1 = new StartingButton1(stage,scene1);
-        Button button1 = startingButton1.getButton();
-
-        StartingButton2 startingButton2 = new StartingButton2(stage,scene2);
-        Button button2 = startingButton2.getButton();
+        StartingButton startingButton = new StartingButton(stage,scene1);
+        Button button1 = startingButton.getButton();
 
         Background background = createStartingBackground();
 
@@ -47,7 +43,6 @@ public class MenuBoard {
         }
 
         grid.add(button1,5,2);
-        grid.add(button2,5,4);
         grid.setHgap(10);
         grid.setVgap(10);
         grid.setBackground(background);

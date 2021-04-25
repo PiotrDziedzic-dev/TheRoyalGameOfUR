@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class StartingButton1 {
+public class StartingButton {
 
     private final Button button = new Button();
     private final Stage stage;
@@ -14,11 +14,11 @@ public class StartingButton1 {
         return button;
     }
 
-    public StartingButton1(Stage stage, Scene scene) {
+    public StartingButton(Stage stage, Scene scene) {
         this.stage = stage;
-        button.setText("Player vs PC");
+        button.setText("Start game");
         button.setOnAction(event -> {stage.setScene(scene);
-        stage.setTitle("TheRoyalGameOfUr_SelectingGameMode");
+        stage.setTitle("TheRoyalGameOfUr_Menu");
 
         });
     }

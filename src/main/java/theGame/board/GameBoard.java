@@ -11,7 +11,7 @@ import theGame.scene.BasicSetting_Label_PvsP_Mode;
 import theGame.scene.BasicSettings_Boards;
 import theGame.scene.BasicSettings_Pawns;
 
-public class OneVsOneBoard {
+public class GameBoard {
 
     GridPane grid = new GridPane();
     Button diceTossButton = new Button();
@@ -37,7 +37,7 @@ public class OneVsOneBoard {
         return background;
     }
 
-    public OneVsOneBoard() {
+    public GameBoard() {
 
         diceTossButton.setText("Dice Roll");
 

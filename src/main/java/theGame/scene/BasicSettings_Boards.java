@@ -46,7 +46,7 @@ public class BasicSettings_Boards {
         BoardField boardField9 = new BoardField(6,2,9);
         BoardField boardField10 = new BoardField(7,2,10);
         BoardField boardField11= new BoardField(8,2,11);
-        BoardField boardField12 = new BoardField(9,2,11);
+        BoardField boardField12 = new BoardField(9,2,12);
 
         BoardField boardField1y = new BoardField(5,1,1);
         BoardField boardField2y = new BoardField(4,1,2);

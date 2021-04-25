@@ -4,8 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import theGame.board.ChoseGameModeBoard;
-import theGame.board.OneVsOneBoard;
+import theGame.board.GameBoard;
 import theGame.board.MenuBoard;
 
 
@@ -15,14 +14,12 @@ public class RoyalGameOfUr extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
-        OneVsOneBoard oneVsOneBoard = new OneVsOneBoard();
-        Scene playerVsPlayerScene = new Scene(oneVsOneBoard.getGrid(),1200,600,Color.TRANSPARENT);
-        ChoseGameModeBoard choosingGameModeBoard = new ChoseGameModeBoard(primaryStage,playerVsPlayerScene);
-        Scene choosingGameModeScene = new Scene(choosingGameModeBoard.getGrid(),1200,600,Color.TRANSPARENT);
+        GameBoard gameBoard = new GameBoard();
+        Scene playerVsPlayerScene = new Scene(gameBoard.getGrid(),1200,600,Color.TRANSPARENT);
 
-        MenuBoard menuBoard = new MenuBoard(primaryStage,choosingGameModeScene,playerVsPlayerScene);
+        MenuBoard menuBoard = new MenuBoard(primaryStage,playerVsPlayerScene);
         
         Scene scene = new Scene(menuBoard.getGrid(),1200,600, Color.TRANSPARENT);
         primaryStage.setTitle("TheRoyalGameOfUr");
